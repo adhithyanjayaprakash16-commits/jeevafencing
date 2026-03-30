@@ -129,21 +129,6 @@ if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name  = document.getElementById('name').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-
-    if (!name) {
-      alert('Please enter your name.');
-      document.getElementById('name').focus();
-      return;
-    }
-
-    if (!phone || phone.length < 10) {
-      alert('Please enter a valid phone number.');
-      document.getElementById('phone').focus();
-      return;
-    }
-
     const formData = new FormData(contactForm);
     const endpoint = contactForm.action;
 
